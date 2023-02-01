@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "649575856552",
+    "project_id": "gps-tracking-ad7bb",
+    "storage_bucket": "gps-tracking-ad7bb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:649575856552:android:49f71b59eca101414e459d",
+        "android_client_info": {
+          "package_name": "dgtic.unam.gps_tracking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "649575856552-94h788jgm8o3qu6nhi07o72m8oqdh6nu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dgtic.unam.gps_tracking",
+            "certificate_hash": "f97083090b034de1db036f0e6a6df78a71ad99ac"
+          }
+        },
+        {
+          "client_id": "649575856552-2qosgigbi9b0j0iit9hijmil6k474h3o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyvLIZ3ofc09sKdL6ImPqH0bY5eJqNfVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "649575856552-2qosgigbi9b0j0iit9hijmil6k474h3o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
