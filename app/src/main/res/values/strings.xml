@@ -9,4 +9,6 @@
     <string name="signup_msg">Crear una nueva cuenta</string>
     <string name="user">Usuario</string>
     <string name="logout">Salir</string>
+    <string name="version">1.0</string>
+    <string name="creator">Moisés Sánchez</string>
 </resources>
