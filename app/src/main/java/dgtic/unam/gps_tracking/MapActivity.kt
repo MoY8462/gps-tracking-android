@@ -5,6 +5,8 @@ import android.content.pm.PackageManager
 import android.location.Location
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.CheckBox
 import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.core.app.ActivityCompat
@@ -83,6 +85,18 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, OnMyLocationButtonC
         map.setOnMyLocationClickListener(this)
         enableLocation()
 
+        with(map.uiSettings) {
+            isZoomControlsEnabled = true
+            //isCompassEnabled = isChecked(R.id.compass_button)
+            isMyLocationButtonEnabled = true
+            //isIndoorLevelPickerEnabled = isChecked(R.id.level_button)
+            //isMapToolbarEnabled = isChecked(R.id.maptoolbar_button)
+            isZoomGesturesEnabled = true
+            isScrollGesturesEnabled = true
+            //isTiltGesturesEnabled = isChecked(R.id.tiltgest_button)
+            isRotateGesturesEnabled = true
+        }
+
     }
 
     private fun createMarker() {
@@ -153,5 +167,8 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, OnMyLocationButtonC
     override fun onMyLocationClick(pos: Location) {
         Toast.makeText(this, "Te encuentras en ${pos.latitude}, ${pos.longitude}", Toast.LENGTH_SHORT).show()
     }
+
+
+
 }
 
