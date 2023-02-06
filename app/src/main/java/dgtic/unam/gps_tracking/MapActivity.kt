@@ -22,6 +22,7 @@ class MapActivity : AppCompatActivity() {
         binding = ActivityMapBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        /*
         //Configure actionbar
         actionBar = supportActionBar!!
         actionBar.title = "Map"
@@ -34,9 +35,9 @@ class MapActivity : AppCompatActivity() {
         binding.logoutBtn.setOnClickListener {
             firebaseAuth.signOut()
             checkUser()
-        }
+        }*/
     }
-
+    /*
     private fun checkUser() {
         //Check user is logges in or not
         val firebaseUser = firebaseAuth.currentUser
@@ -50,5 +51,5 @@ class MapActivity : AppCompatActivity() {
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }
-    }
+    }*/
 }
