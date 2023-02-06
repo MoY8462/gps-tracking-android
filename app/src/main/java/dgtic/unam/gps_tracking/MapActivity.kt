@@ -15,6 +15,8 @@ import androidx.fragment.app.Fragment
 import com.google.android.gms.maps.*
 import com.google.android.gms.maps.GoogleMap.OnMyLocationButtonClickListener
 import com.google.android.gms.maps.GoogleMap.OnMyLocationClickListener
+import com.google.android.gms.maps.model.BitmapDescriptor
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.firebase.auth.FirebaseAuth
@@ -80,7 +82,16 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, OnMyLocationButtonC
 
     override fun onMapReady(googleMap: GoogleMap) {
         map = googleMap
-        createMarker()
+        createMarker(
+            19.3329456,
+            -99.1851108,
+            "Ciudad Univesitaria UNAM",
+            "Campus Univesitario")
+        createMarker(
+            19.484103590,
+            -99.2465510187,
+            "FES Acatlán UNAM",
+            "Faculta de Estudios Superiores")
         map.setOnMyLocationButtonClickListener (this)
         map.setOnMyLocationClickListener(this)
         enableLocation()
@@ -99,9 +110,13 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, OnMyLocationButtonC
 
     }
 
-    private fun createMarker() {
-        val coordinates = LatLng ( 19.3329456, -99.1851108)
-        val marker = MarkerOptions().position(coordinates).title("CU")
+    private fun createMarker(lat: Number, long: Number, title: String, description: String) {
+        val coordinates = LatLng (lat as Double, long as Double)
+        val marker = MarkerOptions()
+                        .position(coordinates)
+                        .title(title)
+                        .snippet(description)
+                        //.icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_unam)).anchor(0.0f,0.0f)
         map.addMarker(marker)
         map.animateCamera(
             CameraUpdateFactory.newLatLngZoom(coordinates, 18f),
