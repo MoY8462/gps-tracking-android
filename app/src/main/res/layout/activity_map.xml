@@ -27,7 +27,7 @@
         android:text="@string/logout"/>-->
     <fragment
         class="com.google.android.gms.maps.SupportMapFragment"
-        android:id="@+id/map_fragment"
+        android:id="@+id/mapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
