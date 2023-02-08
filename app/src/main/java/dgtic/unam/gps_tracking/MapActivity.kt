@@ -58,6 +58,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, OnMyLocationButtonC
         }*/
     }
 
+
     private fun createFragment() {
         val mapFragment =
             supportFragmentManager.findFragmentById(R.id.mapFragment) as SupportMapFragment
